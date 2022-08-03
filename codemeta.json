@@ -42,5 +42,18 @@
                 "name": "Heinz Nixdorf Chair for Distributed Information Systems, Friedrich Schiller University Jena, Jena, Germany"
             }
         }
+    ],
+	    "contributor": [
+        {
+            "@type": "Person",
+            "@id": "https://orcid.org/0000-0001-8896-8208",
+            "givenName": "Leila",
+            "familyName": "Feddoul",
+            "email": "leila.feddoul@uni-jena.de",
+            "affiliation": {
+                "@type": "Organization",
+                "name": "Heinz Nixdorf Chair for Distributed Information Systems, Friedrich Schiller University Jena, Jena, Germany"
+            }
+        }
     ]
 }
