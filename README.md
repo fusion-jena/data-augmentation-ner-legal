@@ -1,4 +1,4 @@
-﻿<!---[![DOI](https://zenodo.org/badge/518437897.svg)](https://zenodo.org/badge/latestdoi/518437897)-->
+﻿[![DOI](https://zenodo.org/badge/520801122.svg)](https://zenodo.org/badge/latestdoi/520801122)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/fusion-jena/data-augmentation-ner-legal/blob/master/LICENSE)
 
 # Evaluation of Data Augmentation for Named Entity Recognition in the German Legal Domain
