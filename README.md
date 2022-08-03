@@ -30,8 +30,8 @@
 #### OpenThesaurus
 
 - We recommend to setup the OpenThesaurus mySQL database locally if it is to be used as source for Synonym Replacement with large datasets. 
-- We used the database dump from the **[30th of May 2022]**. We make this specific version available on Zenodo: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6956563.svg)](https://doi.org/10.5281/zenodo.6956563)
-- Alternatively on can download the most recent dump [here](https://www.openthesaurus.de/about/download). 
+- We used the database dump from the **30th of May 2022**. We make this specific version available on Zenodo: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6956563.svg)](https://doi.org/10.5281/zenodo.6956563)
+- Alternatively one can download the most recent dump [here](https://www.openthesaurus.de/about/download). 
 	- If no database connection is provided, the augmentation script will use the (limited) [public API](https://www.openthesaurus.de/about/api).
 
 #### Dataset
@@ -39,7 +39,7 @@
 - Next, the dataset has to be downloaded from [here](https://github.com/elenanereiss/Legal-Entity-Recognition/tree/master/data). 
 - The `ler.conll` file has to be renamed to `train.txt` and put into a folder called `LER_dataset` in the root folder. 
 - Empty `test.txt` and `dev.txt` files should be created in the `LER_dataset`. 
-- Finally, `python generate_datasets.py` can be executed in the root folder to split the dataset into train (70%) and test (15%) and dev sets (15%) and create the training-split fractions. 
+- Finally, `python generate_datasets.py` can be executed in the root folder to split the dataset into train (70%), test (15%), and dev sets (15%) and create the training-split fractions. 
 - The resulting datasets will be saved in the `src/datasets` folder.
 - **This can be done using the following commands:**
 
@@ -49,8 +49,8 @@
 4. `touch LER_dataset/test.txt`
 5. `python generate_datasets.py`
 
-- The result consists of train/test/dev.txt files together with a collection of folders each one representing a training fraction and the same test/dev.txt files (e.g., folder `__0.5` represents the 50% split of the training set)
-- This data provided on Zenodo: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6956603.svg)](https://doi.org/10.5281/zenodo.6956603)
+- The result consists of train/test/dev.txt files together with a collection of folders each one representing a training fraction and the same test/dev.txt files (e.g., folder `___0.5` represents the 50% split of the training set)
+- This data is provided on Zenodo: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6956603.svg)](https://doi.org/10.5281/zenodo.6956603)
 
 ## Run
 
@@ -59,6 +59,7 @@
 - The evaluations can be in general run as follows:
 
 `python model_bilstm.py <trainDir> <testDir> <learningRate> <batchSize> <storage>`
+
 `python model_flert.py <trainDir> <testDir> <batchSize> <epochs>`
 
 - The parameters are defined as follows:
@@ -91,7 +92,7 @@
 	- `dataDir` is the path to the directory that contains the train.txt, test.txt and dev.txt files.
 
 - One example would be: `python aug/synonym_replace.py datasets/___1.0 0.2 clm`.
-- The the final generated datasets are stored under `src/datasets/.
+- The final generated datasets are stored under `src/datasets/.
 	- folders beginning with "c" contain the combined version (original and generated).
 	- folders beginning with "s" contain only the generated data.
 
