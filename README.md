@@ -13,7 +13,7 @@
 
 - The **dataset** used is the **[German LER dataset](https://github.com/elenanereiss/Legal-Entity-Recognition)**.
 
-<img src="figs/workflow.png" alt="Overview of propsoed workflow" width="600"/>
+<img src="figs/workflow1.png" alt="Overview of proposed workflow" width="600"/>
 
 ## Setup
 
