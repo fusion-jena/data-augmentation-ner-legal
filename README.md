@@ -54,6 +54,37 @@
 
 ## Run
 
+#### Augmentation
+
+- The augmentations can be performed with the following commands:
+	- Synonym Replacement: `python aug/synonym_replace.py dataDir percentage source `
+	- Mention Replacement: `python aug/mention_replace.py dataDir	`
+	- Back-Translation:`./back-translate.sh`
+
+- The parameters are defined as follows:
+	- `source` can be either "fasttext", "clm" or "thesaurus".
+	- `percentage` can be any value between 0 and 1.0, determining replacement percentage.
+	- `dataDir` is the path to the directory that contains the train.txt, test.txt and dev.txt files.
+
+- One example would be: `python aug/synonym_replace.py datasets/___1.0 0.2 clm`.
+- We provide the list of commands that should be run to automatically perform all the augmentations ([`.\mention_replace.sh`](https://github.com/fusion-jena/data-augmentation-ner-legal/blob/main/src/mention_replace.sh), [`.\synonym_replace.sh`](https://github.com/fusion-jena/data-augmentation-ner-legal/blob/main/src/synonym_replace.sh), and [`.\backtranslate.sh`](https://github.com/fusion-jena/data-augmentation-ner-legal/blob/main/src/backtranslate.sh)).
+- The final generated datasets are stored under `src/datasets/.
+	- folders beginning with "c" contain the combined version (original and generated).
+	- folders beginning with "s" contain only the generated data.
+
+- Note that running the evaluations with a certain target dataset always results in a list of augmented datasets:
+	- for each dataset fraction (X) a folder containing X% of sentences in their original and augmented form (e.g., "c0.01MR", for mention replacement with 1% dataset fraction).
+	- for each dataset fraction (X) a folder containing X% of sentences in their augmented form (e.g. "s0.1MR", for mention replacement with 10% dataset fraction).
+- This implementation saves a considerable amount of time, because otherwise the first sentence would have to be augmented repeatedly (once for each dataset fraction).
+- If only the full combined augmented set is of interest all datasets besides the dataset starting with "c1.0" may be deleted.
+
+- To execute all augmentation techniques with all dataset fractions, run the following scripts:
+	- `.\backtranslate.sh`
+	- `.\mention_replace.sh`
+	- `.\synonym_replace.sh`
+
+- The generated datasets are provided on Zenodo: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6956603.svg)](https://doi.org/10.5281/zenodo.6956603)
+
 #### Model training and evaluation
 
 - The evaluations can be in general run as follows:
@@ -77,26 +108,11 @@
 - Note that this should be run to generate both baseline and augmented data results.
 - The results are stored in `src/flert_results.csv` and `src/bilstm_results.csv` with, among others,  evaluation metrics, used augmentation method and dataset fraction. 
 
+- To execute all the evaluations over all resulting datasets, run the following scripts:
+	- `./evaluate_BiLSTM-CRF.sh`
+	- `./evaluate_XLM-R.sh`
+	
 - The evaluation results are provided on Zenodo: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6956508.svg)](https://doi.org/10.5281/zenodo.6956508)
-
-#### Augmentation
-
-- The augmentations can be performed with the following commands:
-	- Synonym Replacement: `python aug/synonym_replace.py dataDir percentage source `
-	- Mention Replacement: `python aug/mention_replace.py dataDir	`
-	- Back-Translation:`./back-translate.sh`
-
-- The parameters are defined as follows:
-	- `source` can be either "fasttext", "clm" or "thesaurus".
-	- `percentage` can be any value between 0 and 1.0, determining replacement percentage.
-	- `dataDir` is the path to the directory that contains the train.txt, test.txt and dev.txt files.
-
-- One example would be: `python aug/synonym_replace.py datasets/___1.0 0.2 clm`.
-- The final generated datasets are stored under `src/datasets/.
-	- folders beginning with "c" contain the combined version (original and generated).
-	- folders beginning with "s" contain only the generated data.
-
-- The generated datasets are provided on Zenodo: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6956603.svg)](https://doi.org/10.5281/zenodo.6956603)
 
 ## License
 
