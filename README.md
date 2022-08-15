@@ -68,7 +68,7 @@
 
 - One example would be: `python aug/synonym_replace.py datasets/___1.0 0.2 clm`.
 - We provide the list of commands that should be run to automatically perform all the augmentations ([`.\mention_replace.sh`](https://github.com/fusion-jena/data-augmentation-ner-legal/blob/main/src/mention_replace.sh), [`.\synonym_replace.sh`](https://github.com/fusion-jena/data-augmentation-ner-legal/blob/main/src/synonym_replace.sh), and [`.\backtranslate.sh`](https://github.com/fusion-jena/data-augmentation-ner-legal/blob/main/src/backtranslate.sh)).
-- The final generated datasets are stored under `src/datasets/.
+- The final generated datasets are stored under `src/datasets/`.
 	- folders beginning with "c" contain the combined version (original and generated).
 	- folders beginning with "s" contain only the generated data.
 
