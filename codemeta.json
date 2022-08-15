@@ -9,7 +9,7 @@
     "downloadUrl": "",
     "issueTracker": "https://github.com/fusion-jena/data-augmentation-ner-legal/issues",
     "name": "data-augmentation-ner-legal",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "identifier": "",
     "description": "Source Code for Evaluating Data Augmentation for Named Entity Recognition over the German Legal Domain",
     "referencePublication": "",
@@ -36,7 +36,7 @@
             "@id": "https://orcid.org/0000-0001-5340-8163",
             "givenName": "Robin",
             "familyName": "Erd",
-            "email": "robinerd@proton.me",
+            "email": ["robin.erd@uni-jena.de", "robinerd@proton.me"],
             "affiliation": {
                 "@type": "Organization",
                 "name": "Heinz Nixdorf Chair for Distributed Information Systems, Friedrich Schiller University Jena, Jena, Germany"
