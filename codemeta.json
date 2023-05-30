@@ -12,7 +12,7 @@
     "version": "1.0.1",
     "identifier": "",
     "description": "Source Code for Evaluating Data Augmentation for Named Entity Recognition over the German Legal Domain",
-    "referencePublication": "",
+    "referencePublication": "https://ceur-ws.org/Vol-3257/paper7.pdf",
     "keywords": [
         "Named Entity Recognition",
         "Data Augmentation",
