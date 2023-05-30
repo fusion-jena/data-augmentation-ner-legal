@@ -114,6 +114,37 @@
 	
 - The evaluation results are provided on Zenodo: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6956508.svg)](https://doi.org/10.5281/zenodo.6956508)
 
+## Citation
+
+```
+@inproceedings{DBLP:conf/semweb/ErdFLM22,
+  author       = {Robin Erd and
+                  Leila Feddoul and
+                  Clara Lachenmaier and
+                  Marianne Jana Mauch},
+  editor       = {Mar{\'{\i}}a Navas{-}Loro and
+                  Carlos Badenes{-}Olmedo and
+                  Manolis Koubarakis and
+                  Jos{\'{e}} Luis Redondo Garc{\'{\i}}a and
+                  Sabrina Kirrane and
+                  Nandana Mihindukulasooriya and
+                  Ken Satoh and
+                  Maribel Acosta},
+  title        = {Evaluation of Data Augmentation for Named Entity Recognition in the
+                  German Legal Domain},
+  booktitle    = {Joint Proceedings of the 3th International Workshop on Artificial
+                  Intelligence Technologies for Legal Documents {(AI4LEGAL} 2022) and
+                  the 1st International Workshop on Knowledge Graph Summarization (KGSum
+                  2022) co-located with the 21st International Semantic Web Conference
+                  {(ISWC} 2022), Virtual Event, Hangzhou, China, October 23-24, 2022},
+  series       = {{CEUR} Workshop Proceedings},
+  volume       = {3257},
+  pages        = {62--72},
+  publisher    = {CEUR-WS.org},
+  year         = {2022},
+  url          = {https://ceur-ws.org/Vol-3257/paper7.pdf}
+}
+```
 ## License
 
 This project is licensed under the [MIT License](https://github.com/fusion-jena/data-augmentation-ner-legal/blob/master/LICENSE).
